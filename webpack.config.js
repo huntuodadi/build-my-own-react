@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './index.js',
@@ -7,8 +8,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
   },
+  devtool: 'inline-source-map',
   plugins: [
-    new HtmlWebpackPlugin({templat: './static/index.html'})
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({template: './static/index.html'})
   ],
   module: {
     rules: [

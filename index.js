@@ -7,5 +7,6 @@ const element = {
     children: 'Hello'
   },
 };
+console.log('run');
 const container = document.getElementById('root');
-ReactDom.render(element, container)
+ReactDom.render(element, container);

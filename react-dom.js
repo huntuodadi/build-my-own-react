@@ -4,7 +4,7 @@ ReactDom.render = function(element, container) {
   const { children, ...otherProps } = props;
   console.log('otherProps:', otherProps);
   const node = document.createElement(type)
-  for(attr in otherProps) {
+  for(const attr in otherProps) {
     console.log('attr:', attr);
     node[attr] = otherProps[attr];
   }
